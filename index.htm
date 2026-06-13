@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All India Vishwas Uniforms | Premium Defence & Government Tailoring</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Fully BRIGHT Theme: Khaki, Beige, White & Vibrant Accents */
+        :root {
+            --bg-bright: #FDFBF7;        /* Soft Royal Cream/Beige White Background */
+            --surface-card: #FFFFFF;     /* Pure Crisp White Card */
+            --accent-khaki: #8C7653;     /* Rich Khaki / Military Brass Tan */
+            --accent-khaki-light: #F4EFE6;/* Light Sand Beige for backgrounds */
+            --accent-bright-green: #0F8A5F;/* Premium Slightly Darker Green for clear text visibility */
+            --accent-gold: #D4AF37;      /* Classic Metallic Gold */
+            --text-dark: #1C1E1B;        /* Sharp Dark Charcoal Black for text */
+            --text-muted: #6B726E;       /* Muted Khaki-Gray for subtle text */
+            --border-line: rgba(140, 118, 83, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-bright);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Top Header Navigation Panel */
+        header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        /* Premium Language Toggle Button Styling */
+        .lang-btn {
+            background-color: var(--surface-card);
+            border: 2px solid var(--accent-khaki);
+            color: var(--accent-khaki);
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Space Grotesk', sans-serif;
+            z-index: 100;
+        }
+
+        .lang-btn:hover {
+            background-color: var(--accent-khaki);
+            color: #FFFFFF;
+            box-shadow: 0 4px 15px rgba(140, 118, 83, 0.2);
+            transform: translateY(-1px);
+        }
+
+        /* Main Branding Area */
+        .brand-header-block {
+            text-align: center;
+            padding: 20px 24px 10px 24px;
+        }
+
+        .main-brand-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        .main-brand-title span {
+            color: var(--accent-khaki);
+            background: linear-gradient(120deg, var(--accent-khaki-light) 0%, #EFE9DC 100%);
+            padding: 2px 12px;
+            border-radius: 8px;
+        }
+
+        /* Continuous Infinite Left-to-Right Marquee Slider */
+        .marquee-wrapper {
+            width: 100%;
+            background: var(--accent-khaki);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 14px 0;
+            margin: 25px 0;
+            overflow: hidden;
+            display: flex;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(140, 118, 83, 0.15);
+        }
+
+        .marquee-track {
+            display: inline-block;
+            animation: slideMarquee 20s linear infinite;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #FFFFFF;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .marquee-track span {
+            margin-right: 60px;
+        }
+
+        @keyframes slideMarquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+
+        /* High-Impact Highlight Text Layer with Gradient Orange */
+        .door-service-banner {
+            text-align: center;
+            margin: 25px 0;
+        }
+
+        .door-service-banner h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #FF512F 0%, #F09819 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* Specialization List Layer */
+        .spec-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 25px auto;
+            padding: 0 24px;
+        }
+
+        .spec-intro {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-khaki);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .spec-list {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+
+        /* Golden Glowing Star Effect */
+        .spec-list span {
+            color: var(--accent-gold);
+            margin: 0 8px;
+            display: inline-block;
+        }
+
+        /* Layout Grid Area */
+        .main-container {
+            max-width: 650px;
+            margin: 40px auto 100px auto;
+            padding: 0 24px;
+        }
+
+        /* Action Module Container */
+        .booking-card {
+            background-color: var(--surface-card);
+            border: 1px solid var(--border-line);
+            border-radius: 24px;
+            padding: 35px 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 40px rgba(140, 118, 83, 0.08);
+        }
+
+        .btn-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Button 1: WhatsApp Now Premium Styling with Darker Green for High Visibility */
+        .btn-whatsapp {
+            background-color: var(--accent-bright-green);
+            color: #FFFFFF;
+            box-shadow: 0 6px 20px rgba(15, 138, 95, 0.25);
+        }
+        .btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(15, 138, 95, 0.4);
+            background-color: #0B6B4A;
+        }
+
+        .wa-vector-icon {
+            width: 22px;
+            height: 22px;
+            margin-right: 12px;
+            fill: #FFFFFF;
+            vertical-align: middle;
+        }
+
+        /* Button 2: Call Button gets the clean khaki border look */
+        .btn-call {
+            background-color: var(--accent-khaki-light);
+            color: var(--accent-khaki);
+            border: 2px solid var(--accent-khaki);
+        }
+        .btn-call:hover {
+            background-color: var(--accent-khaki);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(140, 118, 83, 0.15);
+        }
+
+        .btn-location {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-line);
+            font-size: 0.95rem;
+        }
+        .btn-location:hover {
+            border-color: var(--text-dark);
+            color: var(--text-dark);
+            background-color: rgba(0,0,0,0.02);
+            transform: translateY(-2px);
+        }
+
+        /* Fully Fluid Responsive 16:9 Ratio Image Container */
+        .officer-banner-frame {
+            width: 100%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 24px;
+            position: relative;
+        }
+
+        .aspect-ratio-16-9 {
+            width: 100%;
+            position: relative;
+            padding-top: 56.25%;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-line);
+            box-shadow: 0 10px 30px rgba(140, 118, 83, 0.1);
+        }
+
+        .officer-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Highlight Metric Sections Overlay Styling */
+        .metrics-block {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .experience-highlight {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.4;
+            color: var(--text-dark);
+        }
+
+        .green-glow-text {
+            color: var(--accent-khaki);
+            font-weight: 800;
+            background: linear-gradient(rgba(140,118,83,0.1), rgba(140,118,83,0.1));
+            padding: 0 6px;
+            border-radius: 4px;
+        }
+
+        /* High Visibility Custom Border Box */
+        .station-boundary-box {
+            border: 2px dashed var(--accent-khaki);
+            background: var(--accent-khaki-light);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(140, 118, 83, 0.05);
+        }
+
+        .station-boundary-box p {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            line-height: 1.5;
+            color: var(--accent-khaki);
+        }
+
+        /* Verified Feedback Elements */
+        .testimonials-section {
+            margin: 60px 0;
+        }
+
+        .section-header-title {
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .chat-bubble-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .chat-msg-box {
+            background-color: var(--surface-card);
+            border: 1px solid var(--border-line);
+            padding: 20px;
+            border-radius: 16px 16px 16px 4px;
+            max-width: 90%;
+            align-self: flex-start;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+        }
+
+        .chat-msg-box.alternate-user {
+            border-radius: 16px 16px 4px 16px;
+            align-self: flex-end;
+            background-color: var(--accent-khaki-light);
+            border: 1px solid var(--border-line);
+            border-right: 4px solid var(--accent-bright-green);
+        }
+
+        .chat-user-meta {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-khaki);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .chat-user-meta span {
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+
+        .chat-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-dark);
+        }
+
+        /* Branding Global Footer Node */
+        footer {
+            text-align: center;
+            padding: 60px 24px;
+            border-top: 1px solid var(--border-line);
+            background-color: var(--accent-khaki-light);
+        }
+
+        .footer-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .footer-brand span {
+            color: var(--accent-khaki);
+        }
+
+        .footer-court-line {
+            font-size: 1.25rem;
+            color: var(--accent-khaki);
+            font-weight: 700;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.5;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .main-brand-title { font-size: 2.1rem; }
+            .door-service-banner h2 { font-size: 1.8rem; }
+            .spec-list { font-size: 1.1rem; }
+            .booking-card { padding: 25px 20px; }
+            .footer-brand { font-size: 1.7rem; }
+            .footer-court-line { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <button class="lang-btn" id="langToggle" onclick="toggleLanguage()">हिंदी</button>
+    </header>
+
+    <div class="brand-header-block">
+        <h1 class="main-brand-title" id="mainTitle">All India Vishwas <span>Uniforms</span></h1>
+    </div>
+
+    <div class="marquee-wrapper">
+        <div class="marquee-track" id="marqueeText">
+            <span>🔥 FIRST ORDER 15% OFF • </span><span>🔥 FIRST ORDER 15% OFF • </span>
+            <span>🔥 FIRST ORDER 15% OFF • </span><span>🔥 FIRST ORDER 15% OFF • </span>
+            <span>🔥 FIRST ORDER 15% OFF • </span><span>🔥 FIRST ORDER 15% OFF • </span>
+        </div>
+    </div>
+
+    <div class="door-service-banner">
+        <h2 id="doorTitle">FREE DOOR-TO-DOOR SERVICE</h2>
+    </div>
+
+    <div class="spec-container">
+        <div class="spec-intro" id="specIntro">We Are Specialised In Making Uniforms</div>
+        <div class="spec-list" id="specList">
+            <span>★</span>POLICE <span>★</span>CISF <span>★</span>CRPF <span>★</span>BSF <br>
+            <span>★</span>ITBP <span>★</span>ALL UNIFORMS
+        </div>
+    </div>
+
+    <main class="main-container">
+
+        <div class="booking-card">
+            <div class="btn-stack">
+                <a href="https://wa.me/9540462084?text=Hello%20Vishwas%20Uniforms%2C%20I%20want%20to%20book%20an%20appointment.%20Here%20are%20my%20details%3A%0A%0A-%20Name%3A%20%0A-%20Post%3A%20%0A-%20Address%3A%20%0A-%20Nearest%20Police%20Station%3A%20%0A-%20Nearest%20Metro%20Station%3A%20%0A-%20Booking%20For%3A%20%5B%20%5D%20Accessories%20%2F%20%5B%20%5D%20Uniform%20Dress" target="_blank" class="action-btn btn-whatsapp" id="btnWa1">
+                    <svg class="wa-vector-icon" viewBox="0 0 24 24">
+                        <path d="M12.004 0C5.378 0 0 5.378 0 12.004c0 2.117.554 4.105 1.605 5.85L0 24l6.336-1.662c1.7.925 3.63 1.42 5.663 1.42 6.629 0 12.004-5.379 12.004-12.004C24.008 5.378 18.63 0 12.004 0zm6.186 16.94c-.256.716-1.488 1.408-2.046 1.483-.513.067-1.183.1-3.398-.815-2.83-1.168-4.63-4.05-4.77-4.24-.143-.186-1.152-1.533-1.152-2.924 0-1.39.715-2.073.971-2.357.256-.283.565-.353.754-.353.188 0 .377.003.54.01.173.008.404-.067.633.486.233.565.795 1.943.863 2.083.068.14.113.305.02.492-.09.186-.14.3-.28.463-.14.162-.293.362-.418.486-.14.136-.287.284-.124.565.162.277.72 1.183 1.543 1.916.1.1.205.198.312.293 1.056.94 1.95 1.233 2.26 1.39.313.155.498.13.684-.085.187-.215.797-.93.101-1.037-.14-.02-.303-.047-.461-.107-.584-.22-1.35-.306-1.782-.016z"/>
+                    </svg>
+                    <span id="waTextSpan">Chat On WhatsApp</span>
+                </a>
+
+                <a href="tel:9540462084" class="action-btn btn-call" id="btnCall1">
+                    📞 Call To Book Fitting
+                </a>
+
+                <a href="https://maps.app.goo.gl/VEM94dGS4xARxJM2A" target="_blank" class="action-btn btn-location" id="btnLoc1">
+                    📍 Shop Location Address
+                </a>
+            </div>
+        </div>
+
+        <div class="officer-banner-frame">
+            <div class="aspect-ratio-16-9">
+                <img class="officer-image" src="https://i.pinimg.com/736x/c5/4a/1c/c54a1c0762b00f11b0e31f098bf6b7cf.jpg" alt="All India Vishwas Uniforms Professional 16:9 Display Banner">
+            </div>
+        </div>
+
+        <section class="metrics-block">
+            <div class="experience-highlight" id="expText">
+                Delivering Master Outfit Excellence with more than <span class="green-glow-text">15+ Years Experience</span>
+            </div>
+
+            <div class="station-boundary-box">
+                <p id="stationText">⚡ Active Partners: Supplying to More Than <span class="green-glow-text">78+ Police Stations</span> & Army HQ Across Segments ⚡</p>
+            </div>
+        </section>
+
+        <section class="testimonials-section">
+            <div class="section-header-title" id="feedbackTitle">Verified Customer Feedback</div>
+            
+            <div class="chat-bubble-container">
+                <div class="chat-msg-box">
+                    <div class="chat-user-meta">Inspector R. K. Sharma <span>• Delhi Police</span></div>
+                    <div class="chat-text" id="review1">"Uniform ki fitting ekdum perfect hai. Sthaniya star par aisi quality aur fabric ki structural line milna mushkil hai."</div>
+                </div>
+
+                <div class="chat-msg-box alternate-user">
+                    <div class="chat-user-meta">Subedar Major Amit Singh <span>• Indian Army</span></div>
+                    <div class="chat-text" id="review2">"Humare pure batch ke liye kapda aur accessories bilkul standard regulations ke hisab se bohot fast delivery ke sath mili."</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-brand">All India <span>Vishwas Uniforms</span></div>
+        <div class="footer-court-line" id="sloganText">
+            "EK BAAR PEHNOGE DESH KI SHAAN , BAAR- BAAR KAROGE VISHWAS PAR ABHIMAAN"
+        </div>
+    </footer>
+
+    <script>
+        let currentLang = "EN";
+
+        const langData = {
+            EN: {
+                toggleBtn: "हिंदी",
+                mainTitle: "All India Vishwas <span>Uniforms</span>",
+                marquee: "<span>🔥 FIRST ORDER 15% OFF • </span>".repeat(6),
+                doorTitle: "FREE DOOR-TO-DOOR SERVICE",
+                specIntro: "We Are Specialised In Making Uniforms",
+                btnCall1: "📞 Call To Book Appointment",
+                waText: "Chat On WhatsApp",
+                btnLoc1: "𖠿  Shop Location Address",
+                expText: 'Delivering Master Outfit Excellence with more than <span class="green-glow-text">15+ Years Experience</span>',
+                stationText: '⚡ Active Partners: Supplying to More Than <span class="green-glow-text">78+ Police Stations</span> & Army HQ Across Segments ⚡',
+                feedbackTitle: "Verified Customer Feedback",
+                review1: '"Uniform ki fitting ekdum perfect hai. Sthaniya star par aisi quality aur fabric ki structural line milna mushkil hai."',
+                review2: '"Humare pure batch ke liye kapda aur accessories bilkul standard regulations ke hisab se bohot fast delivery ke sath mili."',
+                slogan: '"EK BAAR PEHNOGE DESH KI SHAAN , BAAR- BAAR KAROGE VISHWAS PAR ABHIMAAN"'
+            },
+            HI: {
+                toggleBtn: "English",
+                mainTitle: "ऑल इंडिया विश्वास <span>यूनिफॉर्म्स</span>",
+                marquee: "<span>🔥 पहली खरीद पर 15% की भारी छूट • </span>".repeat(6),
+                doorTitle: "फ्री डोर-टू-डोर सर्विस",
+                specIntro: "हम वर्दी बनाने में विशेषज्ञ हैं",
+                btnCall1: "📞 अपॉइंटमेंट बुक करने के लिए कॉल करें",
+                waText: "व्हाट्सएप पर तुरंत चैट करें",
+                btnLoc1: "𖠿  दुकान का लोकेशन और एड्रेस",
+                expText: 'उत्कृष्टता और प्रामाणिकता के साथ <span class="green-glow-text">15+ वर्षों से अधिक का मास्टर अनुभव</span>',
+                stationText: '⚡ सक्रिय भागीदार: देश भर में <span class="green-glow-text">78+ से अधिक पुलिस स्टेशनों</span> और सेना मुख्यालयों को आपूर्ति ⚡',
+                feedbackTitle: "सत्यापित ग्राहकों की प्रतिक्रिया",
+                review1: '"यूनिफॉर्म की फिटिंग एकदम परफेक्ट है। स्थानीय स्तर पर ऐसी प्रीमियम क्वालिटी और मजबूत सिलाई मिलना मुश्किल है।"',
+                review2: '"हमारे पूरे बैच के लिए कपड़ा और एक्सेसरीज बिल्कुल आधिकारिक नियमों के अनुसार बेहद तेज डिलीवरी के साथ मिली।"',
+                slogan: '"एक बार पहनोगे देश की शान, बार-बार करोगे विश्वास पर अभिमान"'
+            }
+        };
+
+        function toggleLanguage() {
+            if (currentLang === "EN") {
+                currentLang = "HI";
+                applyLanguage("HI");
+            } else {
+                currentLang = "EN";
+                applyLanguage("EN");
+            }
+        }
+
+        function applyLanguage(lang) {
+            document.getElementById("langToggle").innerText = langData[lang].toggleBtn;
+            document.getElementById("mainTitle").innerHTML = langData[lang].mainTitle;
+            document.getElementById("marqueeText").innerHTML = langData[lang].marquee;
+            document.getElementById("doorTitle").innerText = langData[lang].doorTitle;
+            document.getElementById("specIntro").innerText = langData[lang].specIntro;
+            document.getElementById("btnCall1").innerText = langData[lang].btnCall1;
+            document.getElementById("waTextSpan").innerText = langData[lang].waText;
+            document.getElementById("btnLoc1").innerText = langData[lang].btnLoc1;
+            document.getElementById("expText").innerHTML = langData[lang].expText;
+            document.getElementById("stationText").innerHTML = langData[lang].stationText;
+            document.getElementById("feedbackTitle").innerText = langData[lang].feedbackTitle;
+            document.getElementById("review1").innerText = langData[lang].review1;
+            document.getElementById("review2").innerText = langData[lang].review2;
+            document.getElementById("sloganText").innerText = langData[lang].slogan;
+        }
+    </script>
+
+</body>
+</html>

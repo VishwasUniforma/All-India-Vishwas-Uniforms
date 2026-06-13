@@ -35,13 +35,14 @@
             color: var(--text-dark);
             overflow-x: hidden;
             position: relative;
+            -webkit-font-smoothing: antialiased;
         }
 
         /* Top Header Navigation Panel */
         header {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 20px 24px;
+            padding: 16px 20px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
@@ -52,10 +53,10 @@
             background-color: var(--surface-card);
             border: 2px solid var(--accent-khaki);
             color: var(--accent-khaki);
-            padding: 8px 18px;
+            padding: 6px 14px;
             border-radius: 8px;
             font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Space Grotesk', sans-serif;
@@ -65,31 +66,36 @@
         .lang-btn:hover {
             background-color: var(--accent-khaki);
             color: #FFFFFF;
-            box-shadow: 0 4px 15px rgba(140, 118, 83, 0.2);
-            transform: translateY(-1px);
         }
 
         /* Main Branding Area */
         .brand-header-block {
             text-align: center;
-            padding: 20px 24px 10px 24px;
+            padding: 10px 20px;
         }
 
         .main-brand-title {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
             color: var(--text-dark);
             line-height: 1.1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
 
         .main-brand-title span {
             color: var(--accent-khaki);
             background: linear-gradient(120deg, var(--accent-khaki-light) 0%, #EFE9DC 100%);
-            padding: 2px 12px;
+            padding: 4px 16px;
             border-radius: 8px;
+            font-size: 2.4rem;
+            display: inline-block;
+            width: fit-content;
         }
 
         /* Continuous Infinite Left-to-Right Marquee Slider */
@@ -98,8 +104,8 @@
             background: var(--accent-khaki);
             border-top: 1px solid rgba(0,0,0,0.05);
             border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 14px 0;
-            margin: 25px 0;
+            padding: 12px 0;
+            margin: 20px 0;
             overflow: hidden;
             display: flex;
             white-space: nowrap;
@@ -111,14 +117,14 @@
             animation: slideMarquee 20s linear infinite;
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #FFFFFF;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         .marquee-track span {
-            margin-right: 60px;
+            margin-right: 40px;
         }
 
         @keyframes slideMarquee {
@@ -129,75 +135,99 @@
         /* High-Impact Highlight Text Layer with Gradient Orange */
         .door-service-banner {
             text-align: center;
-            margin: 25px 0;
+            margin: 20px 0;
+            padding: 0 16px;
         }
 
         .door-service-banner h2 {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 3rem;
+            font-size: 2.2rem;
             font-weight: 800;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
             background: linear-gradient(135deg, #FF512F 0%, #F09819 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
+            line-height: 1.2;
         }
 
-        /* Specialization List Layer */
+        /* Specialization List Layer - Mobile Optimized Grid */
         .spec-container {
             text-align: center;
-            max-width: 800px;
-            margin: 25px auto;
-            padding: 0 24px;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0 20px;
         }
 
         .spec-intro {
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--accent-khaki);
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 16px;
+            line-height: 1.4;
         }
 
+        /* Grid layout layout grid for mobile screen wrap fix */
         .spec-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1rem;
             font-weight: 700;
             color: var(--text-dark);
-            line-height: 1.6;
-            letter-spacing: 0.5px;
         }
 
-        /* Golden Glowing Star Effect */
-        .spec-list span {
+        .spec-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background-color: rgba(140, 118, 83, 0.06);
+            padding: 8px 6px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        .spec-item.full-width {
+            grid-column: span 3;
+            background-color: var(--accent-khaki-light);
+            color: var(--accent-khaki);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        .spec-item span {
             color: var(--accent-gold);
-            margin: 0 8px;
-            display: inline-block;
+            font-size: 0.9rem;
         }
 
         /* Layout Grid Area */
         .main-container {
-            max-width: 650px;
-            margin: 40px auto 100px auto;
-            padding: 0 24px;
+            max-width: 600px;
+            margin: 30px auto 60px auto;
+            padding: 0 20px;
         }
 
         /* Action Module Container */
         .booking-card {
             background-color: var(--surface-card);
             border: 1px solid var(--border-line);
-            border-radius: 24px;
-            padding: 35px 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 15px 40px rgba(140, 118, 83, 0.08);
+            border-radius: 20px;
+            padding: 24px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(140, 118, 83, 0.06);
         }
 
         .btn-stack {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
         }
 
         .action-btn {
@@ -205,37 +235,36 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            padding: 18px;
+            padding: 16px;
             border-radius: 12px;
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            transition: all 0.25s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
 
-        /* Button 1: WhatsApp Now Premium Styling with Darker Green for High Visibility */
+        /* Button 1: WhatsApp Now Premium Styling */
         .btn-whatsapp {
             background-color: var(--accent-bright-green);
             color: #FFFFFF;
-            box-shadow: 0 6px 20px rgba(15, 138, 95, 0.25);
+            box-shadow: 0 4px 15px rgba(15, 138, 95, 0.2);
         }
         .btn-whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(15, 138, 95, 0.4);
+            transform: translateY(-1px);
             background-color: #0B6B4A;
         }
 
         .wa-vector-icon {
-            width: 22px;
-            height: 22px;
-            margin-right: 12px;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
             fill: #FFFFFF;
             vertical-align: middle;
         }
 
-        /* Button 2: Call Button gets the clean khaki border look */
+        /* Button 2: Call Button */
         .btn-call {
             background-color: var(--accent-khaki-light);
             color: var(--accent-khaki);
@@ -244,40 +273,29 @@
         .btn-call:hover {
             background-color: var(--accent-khaki);
             color: #FFFFFF;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(140, 118, 83, 0.15);
         }
 
         .btn-location {
             background-color: transparent;
             color: var(--text-muted);
             border: 1px solid var(--border-line);
-            font-size: 0.95rem;
-        }
-        .btn-location:hover {
-            border-color: var(--text-dark);
-            color: var(--text-dark);
-            background-color: rgba(0,0,0,0.02);
-            transform: translateY(-2px);
+            font-size: 0.9rem;
         }
 
         /* Fully Fluid Responsive 16:9 Ratio Image Container */
         .officer-banner-frame {
             width: 100%;
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 24px;
-            position: relative;
+            margin: 30px 0;
         }
 
         .aspect-ratio-16-9 {
             width: 100%;
             position: relative;
-            padding-top: 56.25%;
-            border-radius: 20px;
+            padding-top: 56.25%; 
+            border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--border-line);
-            box-shadow: 0 10px 30px rgba(140, 118, 83, 0.1);
+            box-shadow: 0 8px 24px rgba(140, 118, 83, 0.08);
         }
 
         .officer-image {
@@ -291,14 +309,14 @@
 
         /* Highlight Metric Sections Overlay Styling */
         .metrics-block {
-            margin: 50px 0;
+            margin: 40px 0;
             text-align: center;
         }
 
         .experience-highlight {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             line-height: 1.4;
             color: var(--text-dark);
         }
@@ -307,7 +325,7 @@
             color: var(--accent-khaki);
             font-weight: 800;
             background: linear-gradient(rgba(140,118,83,0.1), rgba(140,118,83,0.1));
-            padding: 0 6px;
+            padding: 0 4px;
             border-radius: 4px;
         }
 
@@ -315,55 +333,53 @@
         .station-boundary-box {
             border: 2px dashed var(--accent-khaki);
             background: var(--accent-khaki-light);
-            padding: 24px;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(140, 118, 83, 0.05);
+            padding: 20px 16px;
+            border-radius: 14px;
         }
 
         .station-boundary-box p {
-            font-size: 1.15rem;
+            font-size: 1rem;
             font-weight: 700;
-            letter-spacing: 0.5px;
-            line-height: 1.5;
+            letter-spacing: 0.2px;
+            line-height: 1.4;
             color: var(--accent-khaki);
         }
 
         /* Verified Feedback Elements */
         .testimonials-section {
-            margin: 60px 0;
+            margin: 40px 0;
         }
 
         .section-header-title {
             text-align: center;
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             color: var(--text-muted);
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
 
         .chat-bubble-container {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
         }
 
         .chat-msg-box {
             background-color: var(--surface-card);
             border: 1px solid var(--border-line);
-            padding: 20px;
-            border-radius: 16px 16px 16px 4px;
-            max-width: 90%;
+            padding: 16px;
+            border-radius: 14px 14px 14px 4px;
+            max-width: 95%;
             align-self: flex-start;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
         }
 
         .chat-msg-box.alternate-user {
-            border-radius: 16px 16px 4px 16px;
+            border-radius: 14px 14px 4px 14px;
             align-self: flex-end;
             background-color: var(--accent-khaki-light);
-            border: 1px solid var(--border-line);
             border-right: 4px solid var(--accent-bright-green);
         }
 
@@ -373,8 +389,9 @@
             color: var(--accent-khaki);
             margin-bottom: 6px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .chat-user-meta span {
@@ -384,25 +401,24 @@
         }
 
         .chat-text {
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 0.9rem;
+            line-height: 1.4;
             color: var(--text-dark);
         }
 
         /* Branding Global Footer Node */
         footer {
             text-align: center;
-            padding: 60px 24px;
+            padding: 40px 20px;
             border-top: 1px solid var(--border-line);
             background-color: var(--accent-khaki-light);
         }
 
         .footer-brand {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             color: var(--text-dark);
         }
 
@@ -411,23 +427,24 @@
         }
 
         .footer-court-line {
-            font-size: 1.25rem;
+            font-size: 1rem;
             color: var(--accent-khaki);
             font-weight: 700;
-            max-width: 650px;
+            max-width: 500px;
             margin: 0 auto;
-            line-height: 1.5;
-            letter-spacing: 0.5px;
+            line-height: 1.4;
             text-transform: uppercase;
         }
 
-        @media (max-width: 768px) {
-            .main-brand-title { font-size: 2.1rem; }
-            .door-service-banner h2 { font-size: 1.8rem; }
-            .spec-list { font-size: 1.1rem; }
-            .booking-card { padding: 25px 20px; }
-            .footer-brand { font-size: 1.7rem; }
-            .footer-court-line { font-size: 1rem; }
+        /* Media Queries for Smaller Screen Viewport Handling */
+        @media (max-width: 480px) {
+            .main-brand-title { font-size: 2.2rem; }
+            .main-brand-title span { font-size: 1.8rem; }
+            .door-service-banner h2 { font-size: 1.65rem; }
+            .spec-list { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+            .spec-item.full-width { grid-column: span 2; font-size: 1rem; }
+            .booking-card { padding: 20px 16px; }
+            .action-btn { font-size: 0.95rem; padding: 14px; }
         }
     </style>
 </head>
@@ -456,8 +473,13 @@
     <div class="spec-container">
         <div class="spec-intro" id="specIntro">We Are Specialised In Making Uniforms</div>
         <div class="spec-list" id="specList">
-            <span>★</span>POLICE <span>★</span>CISF <span>★</span>CRPF <span>★</span>BSF <br>
-            <span>★</span>ITBP <span>★</span>ALL UNIFORMS
+            <div class="spec-item"><span>★</span> POLICE</div>
+            <div class="spec-item"><span>★</span> CISF</div>
+            <div class="spec-item"><span>★</span> CRPF</div>
+            <div class="spec-item"><span>★</span> BSF</div>
+            <div class="spec-item"><span>★</span> ITBP</div>
+            <div class="spec-item"><span>★</span> ARMY</div>
+            <div class="spec-item full-width" id="allUniformsItem"><span>★</span> ALL UNIFORMS <span>★</span></div>
         </div>
     </div>
 
@@ -541,7 +563,8 @@
                 feedbackTitle: "Verified Customer Feedback",
                 review1: '"Uniform ki fitting ekdum perfect hai. Sthaniya star par aisi quality aur fabric ki structural line milna mushkil hai."',
                 review2: '"Humare pure batch ke liye kapda aur accessories bilkul standard regulations ke hisab se bohot fast delivery ke sath mili."',
-                slogan: '"EK BAAR PEHNOGE DESH KI SHAAN , BAAR- BAAR KAROGE VISHWAS PAR ABHIMAAN"'
+                slogan: '"EK BAAR PEHNOGE DESH KI SHAAN , BAAR- BAAR KAROGE VISHWAS PAR ABHIMAAN"',
+                allUniforms: '<span>★</span> ALL UNIFORMS <span>★</span>'
             },
             HI: {
                 toggleBtn: "English",
@@ -557,7 +580,8 @@
                 feedbackTitle: "सत्यापित ग्राहकों की प्रतिक्रिया",
                 review1: '"यूनिफॉर्म की फिटिंग एकदम परफेक्ट है। स्थानीय स्तर पर ऐसी प्रीमियम क्वालिटी और मजबूत सिलाई मिलना मुश्किल है।"',
                 review2: '"हमारे पूरे बैच के लिए कपड़ा और एक्सेसरीज बिल्कुल आधिकारिक नियमों के अनुसार बेहद तेज डिलीवरी के साथ मिली।"',
-                slogan: '"एक बार पहनोगे देश की शान, बार-बार करोगे विश्वास पर अभिमान"'
+                slogan: '"एक बार पहनोगे देश की शान, बार-बार करोगे विश्वास पर अभिमान"',
+                allUniforms: '<span>★</span> सभी यूनिफॉर्म्स <span>★</span>'
             }
         };
 
@@ -586,6 +610,7 @@
             document.getElementById("review1").innerText = langData[lang].review1;
             document.getElementById("review2").innerText = langData[lang].review2;
             document.getElementById("sloganText").innerText = langData[lang].slogan;
+            document.getElementById("allUniformsItem").innerHTML = langData[lang].allUniforms;
         }
     </script>
 
